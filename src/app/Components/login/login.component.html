@@ -1,0 +1,37 @@
+
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="p-heading">
+                        <h3 class="pt-3 font-weight-bold">Login</h3>
+                    </div>
+                    <div class="p-body p-3">
+                        <form>
+
+                            <div class="col">
+                                <label for="userName" class="col-form-label">User Name</label>
+                                <input type="text" id="userName" class="form-control" placeholder="User Name" [(ngModel)] = "userName" name="userName">
+                            </div>
+
+                            <div class="col">
+                                <label for="password" class="col-form-label">Password</label>
+                                <input type="password" id="password" class="form-control" placeholder="Password" [(ngModel)] = "password"  name="password">
+                            </div>
+
+                              <div class="responeMessage">
+                                <p *ngIf="isError" class="text-danger">{{message}}</p>
+                                <p *ngIf="isSuccess" class="text-success">{{message}}</p>
+                              </div>
+
+                              <button type="submit" class="btn btn-danger btn-block mt-4 w-100" (click)="login()">Login</button>
+
+                              <div class="text-center pt-4 text-muted">Don't have an account? <a id="forget" routerLink="/signup">Sign Up</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

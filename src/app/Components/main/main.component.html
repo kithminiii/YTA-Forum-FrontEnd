@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <!-- top line -->
+    <div class="col-md-12">
+      
+    </div>
+    <!-- Content -->
+    <div class="col-md-2 mt-4">
+      <h1>Cat Paw</h1>
+      <img src="../../../assets/img4.png" style="height: 250px;width: 250px; margin-left:-40px;">
+      <p>A forum community dedicated to breeds of cat owners and enthusiasts. Come join the discussion about breeds, training, kittens, food reviews, rescues, and more</p>
+      <a href="/post" type="button" class="btn btn-danger">Create Your Post</a>
+
+
+    </div>
+    <div class="col-md-10 mt-4">
+        <div class="card mt-2" *ngFor="let post of postList">
+          <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">{{post.description}}</p>
+            <a href="/postview/{{post.postId}}"  class="btn btn-danger btn-sm"
+            >See More..</a>
+        </div>   
+  </div>
+</div>
+
+
+
